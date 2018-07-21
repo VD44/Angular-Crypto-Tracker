@@ -2,7 +2,7 @@
 
 Web application made with Angular 6 to track and chart crypto-currencies. Uses the free CryptoCompare API to get live data for over 5000 coins.
 
-
+## Screenshot
 <img src="./crypto-track.png">
 
 ## Angular
