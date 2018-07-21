@@ -1,0 +1,91 @@
+::placeholder {
+  color: rgba(255,255,255,0.6);
+  font-weight: 100;
+}
+
+button {
+  float:right;
+  color: #FFF;
+  background: #FF0057;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slide-out {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1A1A1A;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#coin-query {
+  font-family: 'Montserrat' !important;
+  font-size: 1em;
+  border: 0px;
+  padding: 7px 4px;
+  color: white;
+  width: 150px;
+  display: block;
+  border-radius: 2px;
+  background: #5F5F5F;
+  border-color: #5F5F5F;
+}
+
+#slide-out-header {
+  position: fixed; 
+  top: 0;
+  display: grid;
+  align-content: center;
+  z-index: 2;
+  width: 250px;
+  border-bottom: 3px solid #FF0057;
+  background-color: #111;
+}
+
+#slide-out-header button {
+  margin-left: 10px;
+}
+
+#close-button {
+  float:left;
+}
+
+.coin-info {
+  padding: 0 8px;
+  margin: 2px;
+  background: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-info p {
+  font-size: 0.8em;
+}
+
+.coin-info p i{
+  color: #FF0057;
+}
+
+.coin-info:hover{
+  background: #FF0057;
+}
+
+.coin-info:active{
+  background: #353535;
+}
+
+.coin-info:hover p i, .coin-info:active p i, 
+.coin-info:hover .color-green, 
+.coin-info:hover .color-red{
+  color: #262626;
+}

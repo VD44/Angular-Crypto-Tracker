@@ -1,0 +1,34 @@
+<div id="header">
+    <div id="price-container">
+        <div *ngIf="coins && selectedFiat && selectedCoin">
+        	<h3>{{selectedCoin}}{{selectedFiat}}</h3>
+            <table>
+                <tr>
+                    <th>Market Cap</th>
+                    <th>Volume 24HR</th>
+                    <th>Change 24HR</th>
+                </tr>
+                <tr>
+                    <td>{{ specialRound(coins[selectedCoin][selectedFiat].MKTCAP)}} {{selectedFiat}}</td>
+                    <td>{{ specialRound(coins[selectedCoin][selectedFiat].VOLUME24HOURTO)}} {{selectedFiat}}</td>
+                    <td [ngClass]="coins[selectedCoin][selectedFiat].CHANGEPCT24HOUR >= 0 ? 'color-green' : 'color-red'"><strong>({{ properRound(coins[selectedCoin][selectedFiat].CHANGEPCT24HOUR, 2) }}%) {{properRound(coins[selectedCoin][selectedFiat].CHANGE24HOUR)}}</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="options-container">
+    	<select #selectTimeCtrl id="selectTimeUnit" (change)="selectTimeUnit(selectTimeCtrl.value)">
+    		<option *ngFor="let key of objectKeys(timeSelectDict)" [value]="key" [selected]="key == selectedTimeUnit">{{key}}</option>
+    	</select>
+        <select #selectChartCtrl id="selectChartType" (change)="selectChartType(selectChartCtrl.value)">
+            <option *ngFor="let key of objectKeys(chartTypeDict)" [value]="key" [selected]="key == selectedChartType">{{key}}</option>
+        </select>
+        <select #selectFiatCtrl id="selectFiat" (change)="selectFiat(selectFiatCtrl.value)">
+            <option *ngFor="let key of fiatList" [value]="key" [selected]="key == selectedFiat">{{key}}</option>
+        </select>
+    </div>
+    <div>
+        <button (click)="toggleRemoveButtons()">Remove Coins</button>
+        <button (click)="toggleSlide()">Add Coins</button>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="chart-with-side-bars">
+  	<div #chart id="chart" @easeInOut></div>
+	<div class="side-bar">
+		<div id="coin-list" *ngIf="coins && selectedFiat" @dropIn>
+			<div *ngFor="let coin of objectKeys(coins)" class="coin-info" (click)="selectCoin(coin)" @easeInOut>
+				<p><i *ngIf="showX" class="fa fa-times" (click)="removeCoin(coin)" @easeInOut></i>{{coin}}</p>
+				<p [ngClass]="coins[coin][selectedFiat].CHANGEPCT24HOUR >= 0 ? 'color-green' : 'color-red'">({{ properRound(coins[coin][selectedFiat].CHANGEPCT24HOUR, 2) }}%) {{properRound(coins[coin][selectedFiat].PRICE)}}</p>
+			</div>
+		</div>
+	</div>
+</div>

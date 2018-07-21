@@ -1,0 +1,14 @@
+<div id="slide-out-side-bar" class="slide-out side-bar">
+  <div id="slide-out-header">
+    <div>
+      <button id="close-button" (click)="toggleSlide()">Close</button>
+      <input id="coin-query" type="text" placeholder="Search..." (keyup)="searchCoins($event)">
+    </div>
+  </div>
+  <div id="slide-out-main" *ngIf="allCoins">
+    <div *ngFor="let coin of objectKeys(allCoins)" (click)="addCoin(coin)" class="coin-info">
+      <p>{{coin}}</p>
+      <i *ngIf="coinStringList.includes(coin)" class="fa fa-check color-red"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.7em;
+}
+
+td, th{
+  padding: 0 5px;
+}
+
+select {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  color: #FFF;
+  background: #353535;
+  border-color: #353535;
+  border-radius: 1px;
+  margin: 0 5px;
+}
+
+button {
+  float:right;
+  color: #FFF;
+  background: #FF0057;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#header {
+  width: 100%;
+  background: #1A1A1A;
+  border-bottom: 3px solid #FF0057;
+  display: grid;
+  grid-template-columns: 35% auto 35%;
+  align-items: center;
+}
+
+#price-container {
+  text-align: center;
+  padding: 0 10px;
+  margin-left: 20%;
+  background: #353535;
+}
+
+#options-container {
+  padding: 20px;
+}

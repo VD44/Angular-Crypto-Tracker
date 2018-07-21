@@ -1,0 +1,47 @@
+#chart-with-side-bars {
+  display: grid;
+  grid-template-columns: auto 250px;
+  height: calc(100vh - 100px);
+}
+
+.side-bar {
+  overflow: auto;
+  background: #1A1A1A;
+  height: calc(100vh - 100px);
+}
+
+.coin-list {
+  height: 100%;
+  overflow: auto;
+}
+
+.coin-info {
+  padding: 0 8px;
+  margin: 2px;
+  background: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-info p {
+  font-size: 0.8em;
+}
+
+.coin-info p i{
+  color: #FF0057;
+}
+
+.coin-info:hover{
+  background: #FF0057;
+}
+
+.coin-info:active{
+  background: #353535;
+}
+
+.coin-info:hover p i, .coin-info:active p i, 
+.coin-info:hover .color-green, 
+.coin-info:hover .color-red{
+  color: #262626;
+}
